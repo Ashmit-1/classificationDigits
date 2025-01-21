@@ -2,3 +2,4 @@ random_full_dataset.pkl
 knn_even_odd.pkl
 .venv
 knn_multiclass.pkl
+best_random_full.pkl
