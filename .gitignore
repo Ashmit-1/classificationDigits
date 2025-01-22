@@ -3,3 +3,4 @@ knn_even_odd.pkl
 .venv
 knn_multiclass.pkl
 best_random_full.pkl
+best_knn_full.pkl
