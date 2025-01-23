@@ -4,3 +4,5 @@ knn_even_odd.pkl
 knn_multiclass.pkl
 best_random_full.pkl
 best_knn_full.pkl
+raw_data.csv
+raw_labels.csv
