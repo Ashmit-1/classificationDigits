@@ -26,40 +26,57 @@
         .in_img {
 
             display: flex;
-            background-color: rgb(48, 60, 101);
+            background-color: rgb(14, 17, 57);
             border-radius: 10px;
             height: 50vb;
             width: 50vb;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 0px 10px 10px rgb(83, 97, 168);
+            box-shadow: 0px 0px 10px 10px rgb(83, 135, 168);
             border-style: solid;
             border-color: rgb(38, 0, 255);
             transition: 1s ease;
-
-
-
         }
 
 
         .in_form {
             font-size: 20px;
-
         }
 
         input[type="file"] {
             display: none;
         }
+        input[type="submit"] {
+            display: none;
+        }
 
         .in_but {
+            align-self: center;
             border: 1px solid #ccc;
-            padding: 6px 12px;
+            padding: 1px 12px;
+            margin: 5px;
             cursor: pointer;
             background-color: rgb(205, 236, 255);
             border-radius: 10px;
             transition: 1s ease;
             color: rgb(5, 95, 174);
-            font-weight: 550;
+            
+        }
+        .in_but p{
+            font-weight: 600;
+            font-size: medium;
+        }
+        .submit{
+            cursor: pointer;
+            background-color: rgb(205, 236, 255);
+            color: rgb(5, 95, 174);
+            padding: 8px;
+            border-radius: 5px;
+            transition: 1s ease;
+        }
+        .submit:hover{
+            background-color: rgb(3, 83, 255);
+            color: rgb(184, 220, 252);
         }
 
         .in_but:hover {
@@ -67,30 +84,109 @@
             color: rgb(184, 220, 252);
         }
 
-        h1 {
+        h1, h2 {
             color: rgb(9, 134, 244);
-
-
+        }
+        .norms{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 50px 50px 0px;            
+        }
+        .norms div{
+            height: 200px;
+            width: 100px;
+            background-color: rgb(166, 213, 242);
+            border-radius: 10px;
+            color: rgb(0, 62, 116);
+            padding: 10px;
+            margin: 10px;
+            
+        }
+        .norms div p{
+            padding: 10px;
+            transition: 0.5s ease;
+        }
+        .norms div p:hover{
+            font-size: 120%;
+            overflow: hidden;
+        }
+        .submit_div{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .file_div{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .norms_div{
+            border-style: solid;
+            border-width: 2px;
+            border-color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .mother{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: auto;       
+        }
+        .mother div{
+            width: 90vw;
         }
 
-        .seperator {}
+
     </style>
 </head>
 
 <body>
-    <h1 align="center">
-        Upload the image of your handwritten digit and let our ML model say which digit it is
-    </h1>
-    <hr class="seperator">
+    <div class="mother">
+        <div>
+            <h1 align="center">
+                Upload the image of your handwritten digit and let our ML model say which digit it is
+            </h1>
+        </div>
+    </div>
+
+    <div class="mother">
+        <div class="norms_div">
+            <h2 align="center">
+                Follow these steps to get the best results of prediction
+            </h2>
+            <div class="norms">
+                <div>
+                    <p align="center">Try to crop the extra portions out of the image and focusing only on the hand-written digit</p>
+                </div>
+                <div>
+                    <p align="center">Keep your camera parallel to the image. Don't keep the camera at any angle</p>
+                </div>
+                <div>
+                    <p align="center">Incase of misprediction please give it one more try by recapturing the image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <div class="in_box">
         <div class="in_img">
             <form action="get" class="in_form">
-                <label for="enter_image" class="in_but">Choose your handwritten digit image </label>
-                <br>
-                <input type="file" name="enter_image" id="enter_image">
+                <div class="file_div">
+                    <label for="enter_image" class="in_but"><p align="center">Choose your handwritten digit image </p></label>
+                    <br>
+                    <input type="file" name="enter_image" id="enter_image">
+                </div>
+                <br><br>
+                <div class="submit_div">
+                    <label for="submit" class="submit">Submit</label>
+                    <input type="submit" value="Submit">
+                </div>
             </form>
         </div>
     </div>
+
 </body>
 
 </html>
