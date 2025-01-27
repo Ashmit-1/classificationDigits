@@ -6,3 +6,4 @@ best_random_full.pkl
 best_knn_full.pkl
 raw_data.csv
 raw_labels.csv
+__pycache__
